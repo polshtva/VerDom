@@ -528,7 +528,8 @@
         <script src="js/hero-slider.js"></script>
         <script>
             //Показ комментариев 
-            const visibleReviews = document.querySelectorAll(".reviews .reviews_visible")
+            try {
+                const visibleReviews = document.querySelectorAll(".reviews .reviews_visible")
             const textButton = document.querySelector(".reviews__link")
 
             textButton.addEventListener("click", () => {
@@ -537,6 +538,9 @@
                     textButton.style.display = "none";
                 })
             })
+            } catch (error) {
+                console.error(error);
+        }
 
         </script>
     </body>
